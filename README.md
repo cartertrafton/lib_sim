@@ -1,5 +1,5 @@
 # lib_sim (WIP)
-Library Simulation Software - OOP Final Project
+Library Simulation Software - OOP Final
 ----------------------------------------------------------------------------
 	  _ _ _         _           
 	 | (_) |       (_)          
@@ -16,16 +16,18 @@ Library Simulation Software - OOP Final Project
 	
 ## Features:
   - [ ] Registering a member 
-  - [ ] Issuing/Returning a book
-  - [ ] Add to library
+  - [ ] Look up member info
+  - [ ] Add books/media to the library
+  - [ ] Issue a book to member
   - [ ] Delete from library	
-  - [ ] Search for books
-  - [ ] Check book stock
+  - [ ] Search for books/media
+  - [ ] Check book info (quantity, facts, etc)
   - [ ] Handling book returns
-  - [ ] Check for due dates
+  - [ ] Check up coming due dates
   - [ ] ...
 
 ## Outline
+
 ### PSEUDOCODE
 - WIP
 
