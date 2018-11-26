@@ -32,7 +32,8 @@ Library Simulation Software - OOP Final
 ```
 Start
 Print welcome screen
-Print menu
+Create media list
+Create user list
 Loop for function choice
   Registering a user
     Create new user and add to user list
@@ -78,11 +79,11 @@ Check up coming due dates
 cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 
 ### Timeline
-- [ ] Outline
+- [x] Outline
+- [x] Pseudocode 
 - [ ] Objects/Functions
-- [ ] Pseudocode 
 - [ ] Main program
-- [ ] Report
+- [ ] Report video
 
 ### Resources
 - Proffesor Carpenters's lectures
