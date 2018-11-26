@@ -47,14 +47,16 @@ Exit
 ```
 
 ###  OBJECTS
+```
 Media
   Books
   Movies
   Music
 Customer
 Employee
-
+```
 ### FUNCTIONS
+```
 Registering a customer
 Look up customer info
 Issue a book to member
@@ -62,7 +64,7 @@ Search for books/media
 Check media quantity
 Return books / Add new books to system
 Check up coming due dates
-
+```
 
 ## Meta
 cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
@@ -76,7 +78,6 @@ cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 
 ### Resources
 - Proffesor Carpenters's lectures
-
 
 
 
