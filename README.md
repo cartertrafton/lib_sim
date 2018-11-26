@@ -34,6 +34,7 @@ Start
 Print welcome screen
 Create media list
 Create user list
+Login (?)
 Loop for function choice
   Registering a user
     Create new user and add to user list
@@ -62,7 +63,7 @@ Media
   Movies
   Music
 Customer
-Employee
+Employee (?)
 ```
 ### FUNCTIONS
 ```
