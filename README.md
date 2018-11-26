@@ -87,7 +87,7 @@ cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 - [ ] Report video
 
 ### Resources
-- Proffesor Carpenters's lectures
+- Profesor Carpenters's lectures
 
 
 
