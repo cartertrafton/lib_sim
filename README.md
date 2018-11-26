@@ -29,13 +29,40 @@ Library Simulation Software - OOP Final
 ## Outline
 
 ### PSEUDOCODE
-- WIP
+```
+Start
+Login (?)
+Loop for function choice
+  Registering a customer
+    Create new customer and add to customer list
+  Look up customer info
+    Search through customer list
+  Issue a book to member
+    
+  Search for books/media
+  Check media quantity
+  Return books / Add new books to system
+  Check up coming due dates
+Exit
+```
 
 ###  OBJECTS
-- WIP
+Media
+  Books
+  Movies
+  Music
+Customer
+Employee
 
 ### FUNCTIONS
-- WIP
+Registering a customer
+Look up customer info
+Issue a book to member
+Search for books/media
+Check media quantity
+Return books / Add new books to system
+Check up coming due dates
+
 
 ## Meta
 cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
