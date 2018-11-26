@@ -31,18 +31,26 @@ Library Simulation Software - OOP Final
 ### PSEUDOCODE
 ```
 Start
-Login (?)
+Print welcome screen
+Print menu
 Loop for function choice
-  Registering a customer
-    Create new customer and add to customer list
+  Registering a user
+    Create new user and add to user list
   Look up customer info
-    Search through customer list
-  Issue a book to member
-    
+    Search through user list
+    Print info and held media
+  Issue a book to user
+    Add book to user's collection
+    Change quantity of book in library
   Search for books/media
-  Check media quantity
+    Search through library lists 
+    Print results and info
   Return books / Add new books to system
-  Check up coming due dates
+    Remove from user collection
+    Change library quantity
+  Check due dates
+    Search through customer list
+    Check for due dates
 Exit
 ```
 
