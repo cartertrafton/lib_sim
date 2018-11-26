@@ -12,7 +12,7 @@ Library Simulation Software - OOP Final
 ----------------------------------------------------------------------------
 
 ## Description 
- - Digitize the library management system [...]
+ - Digitize the library management system 
 	
 ## Features:
   - [ ] Registering a member 
