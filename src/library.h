@@ -31,7 +31,7 @@ class media 						// Base class of all media
 		//media(){}	
 		~media(){}						// Deconstructor
 		
-		virtual void setTite(){}		// Set functions
+		virtual void setTitle(){}		// Set functions
 		virtual void setQuantity(){}
 		virtual void setDueDate(){}
 		
