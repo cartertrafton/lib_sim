@@ -17,21 +17,28 @@ using namespace std;
 class user 
 {
 	private:
-		/*
-		ID_number
-		name
-		collection[]
-		*/
+		
+		int userID;
+		string userName
+		//collection[]			// Users current collection of books.
+		
 	public:
-		/*
-		constructor
-		deconstructor
-		get
-		set
-		print
-			
-		addMedia to collection
-		removeMedia form collection
+		
+		user(){}				// Constructor
+		//user(){}
+		~user(){}				// Deconstructor
 
-		*/
+		void setUserID(){}		// Set functions
+		void setUserName(){}
+
+		int getUserID(){}		// Get funcitons
+		string getUserName(){}
+
+		void print(){}			// Print data
+			
+		// addMedia to collection
+		// removeMedia form collection
+
+		
+		}
 };
