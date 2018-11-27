@@ -7,8 +7,12 @@
  * as well as functions for adding media to and removing media from the 
  * user's collection.
  *
- *
  */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 class user 
 {
