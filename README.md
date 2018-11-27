@@ -24,7 +24,6 @@ Library Simulation Software - OOP Final
   - [ ] Check book info (quantity, facts, etc)
   - [ ] Handling book returns
   - [ ] Check up coming due dates
-  - [ ] ...
 
 ## Outline
 
@@ -34,7 +33,6 @@ Start
 Print welcome screen
 Create media list
 Create user list
-~~Login (?)~~
 Loop for function choice
   Registering a user
     Create new user and add to user list
@@ -63,7 +61,6 @@ Media
   Movies
   Music
 Customer
-~~Employee (?)~~
 ```
 ### FUNCTIONS
 ```
@@ -82,16 +79,17 @@ cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 ### Timeline
 - [x] Outline
 - [x] Pseudocode 
-- [ ] Objects/Functions
+- [ ] Objects
+- [ ] Functions
 - [ ] Main program
 - [ ] Report video
 
 ### Resources
 - Profesor Carpenters's lectures
+- Long walks to the Boston Public Library
 
 
-
-
+:~)
 
 
 
