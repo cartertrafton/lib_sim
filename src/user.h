@@ -19,7 +19,7 @@ class user
 	private:
 		
 		int userID;
-		string userName
+		string userName;
 		//collection[]			// Users current collection of books.
 		
 	public:
@@ -40,5 +40,5 @@ class user
 		// removeMedia form collection
 
 		
-		}
+		
 };
