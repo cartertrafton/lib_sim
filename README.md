@@ -56,11 +56,11 @@ Exit
 
 ###  OBJECTS
 ```
+User
 Media
   Books
   Movies
   Music
-Customer
 ```
 ### FUNCTIONS
 ```

@@ -25,16 +25,23 @@ class user
 	public:
 		
 		user(){}				// Constructor
-		//user(){}
+		user(int inID, string inName)
+		{
+			setUserID(inID); setUserName(inName);
+		}
 		~user(){}				// Deconstructor
 
-		void setUserID(){}		// Set functions
-		void setUserName(){}
+		void setUserID(int inID){ userID = inID; }		// Set functions
+		void setUserName(string inName){ userName = inName; }
 
-		int getUserID(){}		// Get funcitons
-		string getUserName(){}
+		int getUserID(){ return userID; }		// Get funcitons
+		string getUserName(){ return userName; }
 
-		void print(){}			// Print data
+		void print() 	// Print data
+		{
+			cout << "\tUserID: " << this->userID << endl;
+			cout << "\tName: " << this->userName << endl;
+		}			
 			
 		// addMedia to collection
 		// removeMedia form collection
