@@ -40,20 +40,15 @@ class media 						// Base class of all media
 };
 
 
-
 /*
  * Book derived class
  */
-
 class book : public media			
 {
 	private:
-
 		int ISBN;					// ISBN of book
 		string author;				// Author's name
-		
 	public:
-		
 		book(){}					// Constructor
 		book(string inTitle, int inQuantity, string inDueDate, int inISBN, string inAuthor)
 		{
@@ -75,24 +70,18 @@ class book : public media
 			cout << "\tAuthor: " << this->author << endl;
 			cout << "\tISBN: " << this->ISBN << endl;
 		}	
-		
 };
-
 
 
 /*
  * Movie derived class
  */
-
 class movie : public media			// Derived movie from media as sub-class
 {
 	private:
-		
 		string director;			// Director of movie
 		int releaseYear;			// Year of release
-
 	public:
-		
 		movie(){}					// Constructor
 		movie(string inTitle, int inQuantity, string inDueDate, string inDirector, int inReleaseYear)
 		{
@@ -116,18 +105,16 @@ class movie : public media			// Derived movie from media as sub-class
 		
 };
 
+
 /*
  * Music derived class
  */
-
 class music : public media			// Derived music from media as sub-class
 {	
 	private:	
 		string artist;				// Album artist
 		string genre;				// Name of genre
-
 	public:
-		
 		music(){}					// Constructor
 		music(string inTitle, int inQuantity, string inDueDate, string inArtist, string inGenre)
 		{
@@ -148,6 +135,5 @@ class music : public media			// Derived music from media as sub-class
 			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tArtist: " << this->artist << endl;
 			cout << "\tGenre: " << this->genre << endl;
-		}				
-		
+		}					
 };

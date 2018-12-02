@@ -19,45 +19,57 @@ using namespace std;
  */
 void optionMenu();
 void welcomeMenu();
+// TODO: Add rest of functions
+
+/*
+ * Test media instantiation
+ */
+// TODO: Add media instatiation  
 
 
 
 /*
- * Media instantiation
+ * Test user creation
  */
+// TODO: Add user instatiation and populate collections with media
 
+
+
+/*
+ * Library/list creation and population
+ */
+// TODO: Create library list and populate with media
+// TODO: Create user list and populate with users
+
+
+
+/*
+ * Main loop
+ */
 int main()
 {
 	int choice = 0;
-
-
 	welcomeMenu();
 
 	while(1)
 	{
-		/*
-		 * Main loop
-		 */
-
 		optionMenu();
 		cin >> choice;
-
-		switch(choice)
+		switch(choice)		// TODO: Add choices -> functions
 		{
-			case 0: break;
-			case 1: 
+			case 0: break;	// EXIT
+			case 1: 		// NEW USER
 				break;
-			case 2: 
+			case 2: 		// USER SEARCH
 				break;
-			case 3: 
+			case 3: 		// ISSUE BOOK TO USER
 				break;
-			case 4: 
+			case 4: 		// MEDIA SEARCH
 				break;
-			case 5: 
+			case 5: 		// RETURN BOOK
 				break;
-			case 6: 
+			case 6: 		// CHECK DUE DATES
 				break;
-
 		}
 
 		if (choice == 0)
@@ -65,38 +77,7 @@ int main()
 			cout << "Exiting...\n";
 			exit(0);
 		}
-
 	}
 
 	return 0;
 }
- 
-void welcomeMenu()
-{
-	cout << "---------------------------------------------\n";
-	cout << "\t WELCOME TO\n";
-	cout << "\t  _ _ _         _           \n";
-	cout << "\t | (_) |       (_)          \n";
-	cout << "\t | |_| |__  ___ _ _ __ ___  \n";
-	cout << "\t | | | '_ \\/ __| | '_ ` _ \\ \n";
-	cout << "\t | | | |_) \\__ \\ | | | | | |\n";
-	cout << "\t |_|_|_.__/|___/_|_| |_| |_|\n";
-	cout << "\n\tLibrary Management Software\n";
-	cout << "---------------------------------------------\n";
-}
-
-void optionMenu()
-{
-	cout << " PRESS: \n";
-	cout << "\t[ 1 ] to Registering a new user\n";
-	cout << "\t[ 2 ] to Look up user information\n";
-	cout << "\t[ 3 ] to Issue a book to a user\n";
-	cout << "\t[ 4 ] to Search for media / check quantity\n";
-	cout << "\t[ 5 ] to Return book from user\n";
-	cout << "\t[ 6 ] to Check for up-coming due-dates\n";
-	cout << "\t[ 0 ] to EXIT\n";
-}
-
-
-
-

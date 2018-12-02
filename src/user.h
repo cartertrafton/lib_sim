@@ -14,14 +14,16 @@
 
 using namespace std;
 
+
+/*
+ * User account class
+ */
 class user 
 {
 	private:
-		
 		int userID;
 		string userName;
-		//collection[]			// Users current collection of books.
-		
+		// TODO: collection[]			// Users current collection of books.
 	public:
 		
 		user(){}				// Constructor
