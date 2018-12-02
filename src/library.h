@@ -22,7 +22,7 @@ class media 						// Base class of all media
 	private:
 		
 		string title;				// Title of media (Book, movie, or album)
-		int quantityInLibrary;		// Current quanitity in Library
+		int quantity;		// Current quantity in Library
 		string dueDate;				// The due date of book (or NULL)
 		
 	public:
@@ -30,12 +30,12 @@ class media 						// Base class of all media
 		media(){}										// Constructor
 		~media(){}										// Deconstructor
 
-		virtual void setTitle(){}						// Set functions
-		virtual void setQuantity(){}
-		virtual void setDueDate(){}
+		virtual void setTitle(string inTitle){ title = inTitle; }						// Set functions
+		virtual void setQuantity(int inQuantity){ quantity = inQuantity; }
+		virtual void setDueDate(string inDueDate){ dueDate = inDueDate; }
 
 		virtual string getTitle(){ return title; }		// Get functions
-		virtual int getQuantity(){ return quanitity; }
+		virtual int getQuantity(){ return quantity; }
 		virtual string getDueDate(){ return dueDate; }		
 };
 
@@ -57,7 +57,7 @@ class book : public media
 		book(){}					// Constructor
 		book(string inTitle, int inQuantity, string inDueDate, int inISBN, string inAuthor)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); set setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
 			setISBN(inISBN); setAuthor(inAuthor);
 		}
 		~book(){}					// Deconstructor
@@ -70,8 +70,8 @@ class book : public media
 
 		void print()										// Print data
 		{
-			cout << "\tTitle: " << this->title << endl;
-			cout << "\tQuantity: " << this->quanitity << endl;
+			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tAuthor: " << this->author << endl;
 			cout << "\tISBN: " << this->ISBN << endl;
 		}	
@@ -96,20 +96,20 @@ class movie : public media			// Derived movie from media as sub-class
 		movie(){}					// Constructor
 		movie(string inTitle, int inQuantity, string inDueDate, string inDirector, int inReleaseYear)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); set setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
 			setDirector(inDirector); setReleaseYear(inReleaseYear);
 		}
 		~movie(){}					// Deconstructor
 		
-		setDirector(string inDirector){ director = inDirector; }				// Set functions 
-		setReleaseYear(int inReleaseYear){ releaseYear = inReleaseYear; }
-		getDirector(){ return director; }										// Get functions
-		getReleaseYear(){ return releaseYear; }
+		void setDirector(string inDirector){ director = inDirector; }				// Set functions 
+		void setReleaseYear(int inReleaseYear){ releaseYear = inReleaseYear; }
+		string getDirector(){ return director; }										// Get functions
+		int getReleaseYear(){ return releaseYear; }
 		
 		void print()			// Print data
 		{
-			cout << "\tTitle: " << this->title << endl;
-			cout << "\tQuantity: " << this->quanitity << endl;
+			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tDirector: " << this->director << endl;
 			cout << "\tRelease Year: " << this->releaseYear << endl;
 		}					
@@ -129,9 +129,9 @@ class music : public media			// Derived music from media as sub-class
 	public:
 		
 		music(){}					// Constructor
-		music(string inTitle, int inQuantity, string inDueDate, string inArtist, int inGenre)
+		music(string inTitle, int inQuantity, string inDueDate, string inArtist, string inGenre)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); set setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
 			setArtist(inArtist); setGenre(inGenre);
 		}
 		~music(){}					// Deconstructor
@@ -144,8 +144,8 @@ class music : public media			// Derived music from media as sub-class
 		
 		void print()	// Print data
 		{
-			cout << "\tTitle: " << this->title << endl;
-			cout << "\tQuantity: " << this->quanitity << endl;
+			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tArtist: " << this->artist << endl;
 			cout << "\tGenre: " << this->genre << endl;
 		}				
