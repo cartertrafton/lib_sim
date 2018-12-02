@@ -79,7 +79,7 @@ cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 ### Timeline
 - [x] Outline
 - [x] Pseudocode 
-- [ ] Objects
+- [x] Objects
 - [ ] Functions
 - [ ] Main program
 - [ ] Report video

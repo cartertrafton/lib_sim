@@ -43,8 +43,8 @@ class user
 			cout << "\tName: " << this->userName << endl;
 		}			
 			
-		// addMedia to collection
-		// removeMedia form collection
+		// TODO: FUNCTION add Media to collection
+		// TODO : FUNCTION remove Media from collection
 
 		
 		
