@@ -23,7 +23,7 @@ class user
 	private:
 		int userID;
 		string userName;
-		// TODO: collection[]			// Users current collection of books.
+		// TODO: media* collection[]			// Users current collection of books.
 	public:
 		
 		user(){}				// Constructor
@@ -45,8 +45,8 @@ class user
 			cout << "\tName: " << this->userName << endl;
 		}			
 			
-		// TODO: FUNCTION add Media to collection
-		// TODO : FUNCTION remove Media from collection
+		// TODO: void addToCollection[]
+		// TODO : void removeFromCollection[]
 
 		
 		

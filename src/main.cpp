@@ -19,7 +19,16 @@ using namespace std;
  */
 void optionMenu();
 void welcomeMenu();
-// TODO: Add rest of functions
+void registerNewUser();
+// TODO: declare functions 
+//void userSearch();
+//void mediaSearch();
+//void issueBook();
+//void returnBook();
+//void checkDueDates();
+
+
+
 
 /*
  * Test media instantiation
