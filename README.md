@@ -12,8 +12,11 @@ Library Simulation Software - OOP Final
 ----------------------------------------------------------------------------
 
 ## Description 
- - Digitize the library management system 
+Digitize the library management system 
 	
+## Installation
+Download the ```src``` file and with ```g++```, compile ```main.cpp``` and ```functions.cpp``` together.
+
 ## Features:
   - [x] Registering a member 
   - [x] Look up member info
