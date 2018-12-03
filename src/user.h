@@ -45,8 +45,9 @@ class user
 			cout << "\tName: " << this->userName << endl;
 		}			
 			
-		// TODO: void addToCollection[]
-		// TODO : void removeFromCollection[]
+		// TODO: void addToCollection(media inMedia){}
+		// TODO : void removeFromCollection(media inMedia){}
+
 
 		
 		

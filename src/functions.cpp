@@ -1,3 +1,11 @@
+/*
+ * functions.cpp
+ * 
+ * This file contains all of the functions for the program, not including
+ * the main() function or the object specific functions, such as constructors.
+ *
+ */ 
+
 #include <iostream>
 #include <string>
 #include <list>
@@ -6,16 +14,8 @@
 
 using namespace std;
 
-list <user> Users;
-list <media> Library;
-
-/*
- * functions.cpp
- * 
- * This file contains all of the functions for the program, not including
- * the main() function or the object specific functions, such as constructors.
- *
- */ 
+//list <user> UsersList;
+//list <media> LibraryList;
 
 /*
  * Function definitions
@@ -66,7 +66,7 @@ void registerNewUser()
 	newUser.setUserID(uID);
 	newUser.setUserName(un);
 	
-	Users.push_back(addUser);
+	UsersList.push_back(newUser);
 	return;
 }
 
@@ -77,16 +77,14 @@ void registerNewUser()
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
-void userSearch(string un)
-
+void userSearch(int un) // Changed from name search, to ID# search
 {
     int found = 0;
-    list<user>::iterator i = Users.begin();
-    for (i; i != Users.end(); i++){
-        if ((*i).getUserName() == un){
-            (*i)->print();
-            // cout << "User ID: " << (*i).getUserID() << endl;
-            // cout << "Username: " << (*i).getUserName() << endl;
+    list<user>::iterator i = UsersList.begin();
+    for (i; i != UsersList.end(); i++){
+        if ((*i).getUserID() == un){
+            cout << "User ID: " << (*i).getUserID() << endl;
+            cout << "Username: " << (*i).getUserName() << endl;
             found = 1;
         }
     }
@@ -106,12 +104,11 @@ void userSearch(string un)
 void mediaSearch(string t)
 {
 	int found = 0;
-	list<media>::iterator i = Library.begin();
-	for (i; i != Library.end(); i++){
-		if ((*i).getTitle == t){
-			(*i)->print();
-			// cout << "Title: " << (*i).getTitle() << endl;
-			// cout << "Quantity: " << (*i).getQuantity() << endl;
+	list<media>::iterator i = LibraryList.begin();
+	for (i; i != LibraryList.end(); i++){
+		if ((*i).getTitle() == t){
+			cout << "Title: " << (*i).getTitle() << endl;
+			cout << "Quantity: " << (*i).getQuantity() << endl;
 			found = 1;
 		}
 	}

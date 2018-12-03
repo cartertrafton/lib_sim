@@ -46,11 +46,11 @@ class media 						// Base class of all media
 class book : public media			
 {
 	private:
-		int ISBN;					// ISBN of book
+		long ISBN;					// ISBN of book
 		string author;				// Author's name
 	public:
 		book(){}					// Constructor
-		book(string inTitle, int inQuantity, string inDueDate, int inISBN, string inAuthor)
+		book(string inTitle, int inQuantity, string inDueDate, long inISBN, string inAuthor)
 		{
 			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
 			setISBN(inISBN); setAuthor(inAuthor);
@@ -60,7 +60,7 @@ class book : public media
 		void setISBN(int inISBN){ ISBN = inISBN; }			// Set functions 
 		void setAuthor(string inAuthor){ author = inAuthor; }
 
-		int getISBN(){ return ISBN; }						// Get functions
+		long getISBN(){ return ISBN; }						// Get functions
 		string getAuthor(){ return author; }
 
 		void print()										// Print data
