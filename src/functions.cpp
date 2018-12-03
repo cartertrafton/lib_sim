@@ -7,6 +7,7 @@
 using namespace std;
 
 list <user> Users;
+list <media> Library;
 
 /*
  * functions.cpp
@@ -98,8 +99,18 @@ void userSearch(string un)
  * @param: inputTitle: the title of the media you are searching for
  * @return: none.
  */
-void mediaSearch()
+void mediaSearch(string t)
 {
+	int found = 0;
+	list<media>::iterator i = Library.begin();
+	for (i; i != Library.end(); i++){
+		if ((*i).getTitle == t){
+		cout << "Quantity: " << (*i).getQuantity << endl;
+		found = 1;
+		}
+	}
+	if (found == 0)
+		cout << "No results." << endl;
 	return;
 }
 
