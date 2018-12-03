@@ -14,8 +14,18 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 //list <user> UsersList;
 //list <media> LibraryList;
+=======
+/*
+ * functions.cpp
+ * 
+ * This file contains all of the functions for the program, not including
+ * the main() function or the object specific functions, such as constructors.
+ *
+ */ 
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
 
 /*
  * Function definitions
@@ -56,7 +66,7 @@ void optionMenu()
  * @param: none.
  * @return: none.
  */
-void registerNewUser()
+void registerNewUser(list <user> &Users)
 {
 	int uID;
 	string un;
@@ -66,7 +76,11 @@ void registerNewUser()
 	newUser.setUserID(uID);
 	newUser.setUserName(un);
 	
+<<<<<<< HEAD
 	UsersList.push_back(newUser);
+=======
+	Users.push_back(newUser);
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
 	return;
 }
 
@@ -77,6 +91,7 @@ void registerNewUser()
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
+<<<<<<< HEAD
 void userSearch(int un) // Changed from name search, to ID# search
 {
     int found = 0;
@@ -85,6 +100,18 @@ void userSearch(int un) // Changed from name search, to ID# search
         if ((*i).getUserID() == un){
             cout << "User ID: " << (*i).getUserID() << endl;
             cout << "Username: " << (*i).getUserName() << endl;
+=======
+void userSearch(string un, list<user> &Users)
+
+{
+    int found = 0;
+    list<user>::iterator i = Users.begin();
+    for (i; i != Users.end(); i++){
+        if ((*i).getUserName() == un){
+            (*i).print();
+            // cout << "User ID: " << (*i).getUserID() << endl;
+            // cout << "Username: " << (*i).getUserName() << endl;
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
             found = 1;
         }
     }
@@ -101,14 +128,23 @@ void userSearch(int un) // Changed from name search, to ID# search
  * @param: inputTitle: the title of the media you are searching for
  * @return: none.
  */
-void mediaSearch(string t)
+void mediaSearch(string t, list <media> Library)
 {
 	int found = 0;
+<<<<<<< HEAD
 	list<media>::iterator i = LibraryList.begin();
 	for (i; i != LibraryList.end(); i++){
 		if ((*i).getTitle() == t){
 			cout << "Title: " << (*i).getTitle() << endl;
 			cout << "Quantity: " << (*i).getQuantity() << endl;
+=======
+	list<media>::iterator i = Library.begin();
+	for (i; i != Library.end(); i++){
+		if ((*i).getTitle == t){
+			(*i).print();
+			// cout << "Title: " << (*i).getTitle() << endl;
+			// cout << "Quantity: " << (*i).getQuantity() << endl;
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
 			found = 1;
 		}
 	}

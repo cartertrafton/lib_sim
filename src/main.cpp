@@ -15,14 +15,23 @@
 
 using namespace std;
 
+list <user> Users;
+list <media> Library;
+
 /*
  * Function prototyping
  */
 void optionMenu();
 void welcomeMenu();
+<<<<<<< HEAD
 void registerNewUser();
 void userSearch(int);
 void mediaSearch(string);
+=======
+void registerNewUser(list <user> &Users);
+void userSearch(string un, list<user> &Users);
+void mediaSearch();
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
 void issueBook();
 void returnBook();
 void checkDueDates();
@@ -114,13 +123,19 @@ int main()
 			case 0: break;										// EXIT
 
 			case 1: 											// NEW USER
-				registerNewUser();
+				registerNewUser(Users);
 				break;
 
 			case 2: 											// USER SEARCH
+<<<<<<< HEAD
 				cout << "Enter a User ID to search: ";
 				cin >> inputID;
 				userSearch(inputID);
+=======
+				cout << "Enter a user's name to search: ";
+				cin >> searchName;
+				userSearch(searchName, Users);
+>>>>>>> 72fda44e7b8c06a3da8ab7604606754b5b4d52b1
 				break;
 
 			case 3: 											// ISSUE BOOK TO USER

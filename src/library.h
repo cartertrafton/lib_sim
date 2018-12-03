@@ -36,7 +36,13 @@ class media 						// Base class of all media
 
 		virtual string getTitle(){ return title; }						// Get functions
 		virtual int getQuantity(){ return quantity; }
-		virtual string getDueDate(){ return dueDate; }		
+		virtual string getDueDate(){ return dueDate; }	
+
+		virtual void print()
+		{
+			cout << "\tTitle: " << this->title << endl;
+			cout << "\tQuantity: " << this->quantity << endl;
+		}	
 };
 
 
