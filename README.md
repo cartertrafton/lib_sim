@@ -1,5 +1,5 @@
 # lib_sim (WIP)
-Library Simulation Software - OOP Final
+## Library Simulation Software - OOP Final
 ----------------------------------------------------------------------------
 	  _ _ _         _           
 	 | (_) |       (_)          
@@ -13,9 +13,9 @@ Library Simulation Software - OOP Final
 
 ## Description 
 Digitize the library management system 
-	
+
 ## Installation
-Download the ```src``` file and with ```g++```, compile ```main.cpp``` and ```functions.cpp``` together.
+Download the ```src``` file, then using ```g++```, compile ```main.cpp``` and ```functions.cpp``` together and open the ```*.out``` file.
 
 ## Features:
   - [x] Registering a member 
@@ -77,7 +77,10 @@ Check up coming due dates
 ```
 
 ## Meta
+### Contributers
 cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
+
+cotterj@wit.edu - [@juliacotter](https://github.com/juliacotter)
 
 ### Timeline
 - [x] Outline
@@ -89,7 +92,6 @@ cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
 
 ### Resources
 - Profesor Carpenters's lectures
-- Long walks to the Boston Public Library
 
 
 :~)
