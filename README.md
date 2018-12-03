@@ -15,13 +15,13 @@ Library Simulation Software - OOP Final
  - Digitize the library management system 
 	
 ## Features:
-  - [ ] Registering a member 
-  - [ ] Look up member info
+  - [x] Registering a member 
+  - [x] Look up member info
   - [ ] Add books/media to the library
   - [ ] Issue a book to member
   - [ ] Delete from library	
-  - [ ] Search for books/media
-  - [ ] Check book info (quantity, facts, etc)
+  - [x] Search for books/media
+  - [x] Check book info (quantity, facts, etc)
   - [ ] Handling book returns
   - [ ] Check up coming due dates
 

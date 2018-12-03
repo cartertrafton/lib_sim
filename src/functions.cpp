@@ -63,8 +63,9 @@ void registerNewUser()
 	cout << "Enter the new userID and username: ";
 	cin >> uID >> un;
 	user newUser;
-	newUser.setUserID = uID;
-	newUser.setUserName = un;
+	newUser.setUserID(uID);
+	newUser.setUserName(un);
+	
 	Users.push_back(addUser);
 	return;
 }
@@ -82,13 +83,16 @@ void userSearch(string un)
     int found = 0;
     list<user>::iterator i = Users.begin();
     for (i; i != Users.end(); i++){
-        if ((*i).getUserName == un){
-            cout << "User ID: " << (*i).getUserID << " Username: " << (*i).getUserName << endl;
+        if ((*i).getUserName() == un){
+            (*i)->print();
+            // cout << "User ID: " << (*i).getUserID() << endl;
+            // cout << "Username: " << (*i).getUserName() << endl;
             found = 1;
         }
     }
-    if (found == 0)
+    if (found == 0){
         cout << "No results." << endl;
+    }
 	return;
 }
 
@@ -105,12 +109,15 @@ void mediaSearch(string t)
 	list<media>::iterator i = Library.begin();
 	for (i; i != Library.end(); i++){
 		if ((*i).getTitle == t){
-		cout << "Quantity: " << (*i).getQuantity << endl;
-		found = 1;
+			(*i)->print();
+			// cout << "Title: " << (*i).getTitle() << endl;
+			// cout << "Quantity: " << (*i).getQuantity() << endl;
+			found = 1;
 		}
 	}
-	if (found == 0)
+	if (found == 0){
 		cout << "No results." << endl;
+	}
 	return;
 }
 

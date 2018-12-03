@@ -20,14 +20,11 @@ using namespace std;
 void optionMenu();
 void welcomeMenu();
 void registerNewUser();
-// TODO: declare functions 
-//void userSearch();
-//void mediaSearch();
-//void issueBook();
-//void returnBook();
-//void checkDueDates();
-
-
+void userSearch();
+void mediaSearch();
+void issueBook();
+void returnBook();
+void checkDueDates();
 
 
 /*
@@ -58,6 +55,9 @@ void registerNewUser();
 int main()
 {
 	int choice = 0;
+	string searchMedia;
+	string searchName;
+
 	welcomeMenu();
 
 	while(1)
@@ -66,18 +66,28 @@ int main()
 		cin >> choice;
 		switch(choice)		// TODO: Add choices -> functions
 		{
-			case 0: break;	// EXIT
-			case 1: 		// NEW USER
+			case 0: break;										// EXIT
+
+			case 1: 											// NEW USER
+				registerNewUser();
 				break;
-			case 2: 		// USER SEARCH
+
+			case 2: 											// USER SEARCH
+				cout << "Enter a user's name to search: ";
+				cin >> searchName;
+				userSearch(searchName);
 				break;
-			case 3: 		// ISSUE BOOK TO USER
+
+			case 3: 											// ISSUE BOOK TO USER
 				break;
-			case 4: 		// MEDIA SEARCH
+
+			case 4: 											// MEDIA SEARCH
 				break;
-			case 5: 		// RETURN BOOK
+
+			case 5: 											// RETURN BOOK
 				break;
-			case 6: 		// CHECK DUE DATES
+
+			case 6: 											// CHECK DUE DATES
 				break;
 		}
 
