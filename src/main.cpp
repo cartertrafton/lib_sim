@@ -11,16 +11,20 @@
 #include "library.h"
 #include <iostream>
 #include <string>
+#include <list>
 
 using namespace std;
+
+list <user> Users;
+list <media> Library;
 
 /*
  * Function prototyping
  */
 void optionMenu();
 void welcomeMenu();
-void registerNewUser();
-void userSearch();
+void registerNewUser(list <user> &Users);
+void userSearch(string un, list<user> &Users);
 void mediaSearch();
 void issueBook();
 void returnBook();
@@ -69,13 +73,13 @@ int main()
 			case 0: break;										// EXIT
 
 			case 1: 											// NEW USER
-				registerNewUser();
+				registerNewUser(Users);
 				break;
 
 			case 2: 											// USER SEARCH
 				cout << "Enter a user's name to search: ";
 				cin >> searchName;
-				userSearch(searchName);
+				userSearch(searchName, Users);
 				break;
 
 			case 3: 											// ISSUE BOOK TO USER

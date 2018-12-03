@@ -6,9 +6,6 @@
 
 using namespace std;
 
-list <user> Users;
-list <media> Library;
-
 /*
  * functions.cpp
  * 
@@ -56,7 +53,7 @@ void optionMenu()
  * @param: none.
  * @return: none.
  */
-void registerNewUser()
+void registerNewUser(list <user> &Users)
 {
 	int uID;
 	string un;
@@ -66,7 +63,7 @@ void registerNewUser()
 	newUser.setUserID(uID);
 	newUser.setUserName(un);
 	
-	Users.push_back(addUser);
+	Users.push_back(newUser);
 	return;
 }
 
@@ -77,14 +74,14 @@ void registerNewUser()
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
-void userSearch(string un)
+void userSearch(string un, list<user> &Users)
 
 {
     int found = 0;
     list<user>::iterator i = Users.begin();
     for (i; i != Users.end(); i++){
         if ((*i).getUserName() == un){
-            (*i)->print();
+            (*i).print();
             // cout << "User ID: " << (*i).getUserID() << endl;
             // cout << "Username: " << (*i).getUserName() << endl;
             found = 1;
@@ -103,13 +100,13 @@ void userSearch(string un)
  * @param: inputTitle: the title of the media you are searching for
  * @return: none.
  */
-void mediaSearch(string t)
+void mediaSearch(string t, list <media> Library)
 {
 	int found = 0;
 	list<media>::iterator i = Library.begin();
 	for (i; i != Library.end(); i++){
 		if ((*i).getTitle == t){
-			(*i)->print();
+			(*i).print();
 			// cout << "Title: " << (*i).getTitle() << endl;
 			// cout << "Quantity: " << (*i).getQuantity() << endl;
 			found = 1;
