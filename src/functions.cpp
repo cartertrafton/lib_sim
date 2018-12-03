@@ -1,3 +1,13 @@
+#include <iostream>
+#include <string>
+#include <list>
+#include "library.h"
+#include "user.h"
+
+using namespace std;
+
+list <user> Users;
+
 /*
  * functions.cpp
  * 
@@ -47,6 +57,14 @@ void optionMenu()
  */
 void registerNewUser()
 {
+	int uID;
+	string un;
+	cout << "Enter the new userID and username: ";
+	cin >> uID >> un;
+	user newUser;
+	newUser.setUserID = uID;
+	newUser.setUserName = un;
+	Users.push_back(addUser);
 	return;
 }
 
@@ -57,8 +75,19 @@ void registerNewUser()
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
-void userSearch()
+void userSearch(string un)
+
 {
+    int found = 0;
+    list<user>::iterator i = Users.begin();
+    for (i; i != Users.end(); i++){
+        if ((*i).getUserName == un){
+            cout << "User ID: " << (*i).getUserID << " Username: " << (*i).getUserName << endl;
+            found = 1;
+        }
+    }
+    if (found == 0)
+        cout << "No results." << endl;
 	return;
 }
 
