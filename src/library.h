@@ -22,19 +22,19 @@ class media 						// Base class of all media
 	private:
 		
 		string title;				// Title of media (Book, movie, or album)
-		int quantity;		// Current quantity in Library
+		int quantity;				// Current quantity in Library
 		string dueDate;				// The due date of book (or NULL)
 		
 	public:
 		
-		media(){}										// Constructor
-		~media(){}										// Deconstructor
+		media(){}					// Constructor
+		~media(){}					// Deconstructor
 
-		virtual void setTitle(string inTitle){ title = inTitle; }						// Set functions
+		virtual void setTitle(string inTitle){ title = inTitle; }		// Set functions
 		virtual void setQuantity(int inQuantity){ quantity = inQuantity; }
 		virtual void setDueDate(string inDueDate){ dueDate = inDueDate; }
 
-		virtual string getTitle(){ return title; }		// Get functions
+		virtual string getTitle(){ return title; }						// Get functions
 		virtual int getQuantity(){ return quantity; }
 		virtual string getDueDate(){ return dueDate; }		
 };
