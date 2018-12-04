@@ -79,8 +79,7 @@ void userSearch(string inputUserName, list<user> &UsersList)
     list<user>::iterator i = UsersList.begin();
     for (i; i != UsersList.end(); i++){
         if ((*i).getUserName() == inputUserName){
-            cout << "User ID: " << (*i).getUserID() << endl;
-            cout << "Username: " << (*i).getUserName() << endl;
+            (*i).print();
             found = 1;
         }
     }
@@ -103,8 +102,7 @@ void mediaSearch(string inputTitle, list <media> &LibraryList)
 	list<media>::iterator i = LibraryList.begin();
 	for (i; i != LibraryList.end(); i++){
 		if ((*i).getTitle() == inputTitle){
-			cout << "Title: " << (*i).getTitle() << endl;
-			cout << "Quantity: " << (*i).getQuantity() << endl;
+			(*i).print();
 			found = 1;
 		}
 	}
@@ -131,6 +129,7 @@ void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <
 				if ((*i).getTitle() == inputTitle){
 					(*i).setQuantity((*i).getQuantity()-1);
 					(*j).addToCollection((*i));
+					(*i).setDueDate();
 				}
 			}
 		}
@@ -155,6 +154,8 @@ void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list 
 				if ((*i).getTitle() == inputTitle){
 					(*i).setQuantity((*i).getQuantity()+1);
 					(*j).removeFromCollection((*i));
+				
+					(*i).setDueDate(NULL);
 				}
 			}
 		}
@@ -166,10 +167,21 @@ void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list 
 
 /* 
  * checkDueDates: loops through media list and looks for match of due date to input due date
- * @param: 
+ * @param: inputDate, &LibraryList: the due date you are searching for and the location of memory of LibraryList
  * @return: none.
  */
-void checkDueDates()
+void checkDueDates(string inputDate, list <media> &LibraryList)
 {
+	int found = 0;
+	list<media>::iterator i = LibraryList.begin();
+	for (i; i != LibraryList.end(); i++){
+		if ((*i).getDueDate() == inputDate){
+			(*i).print();
+			found = 1;
+		}
+	}
+	if (found == 0){
+		cout << "No results." << endl;
+	}
 	return;
 }

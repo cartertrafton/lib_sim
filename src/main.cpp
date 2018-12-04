@@ -25,7 +25,7 @@ void userSearch(string inputUserName, list<user> &UsersList);
 void mediaSearch(string inputTitle, list <media> &LibraryList);
 void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList);
 void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList);
-void checkDueDates();
+void checkDueDates(string inputDate, list <media> &LibraryList);
 
 
 /*
@@ -135,7 +135,7 @@ int main()
 			case 4: 											// MEDIA SEARCH
 				cout << "Enter a Title to search: ";
 				cin >> inputTitle;
-				mediaSearch(inputTitle);
+				mediaSearch(inputTitle, LibraryList);
 				break;
 
 			case 5: 											// RETURN BOOK
@@ -149,7 +149,7 @@ int main()
 			case 6: 											// CHECK DUE DATES
 				cout << "Enter a date: ";
 				cin >> inputDate;
-				//checkDueDates(inputDate);
+				checkDueDates(inputDate, LibraryList);
 				break;
 		}
 
