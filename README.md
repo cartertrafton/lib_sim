@@ -58,29 +58,30 @@ Exit
 ```
 
 ###  OBJECTS
-```
-User
-Media
-  Books
-  Movies
-  Music
-```
+
+- User
+- Media
+	- Books
+	- Movies
+	- Music
+- ~~Employee~~
+
 ### FUNCTIONS
-```
-Registering a customer
-Look up customer info
-Issue a book to member
-Search for books/media
-Check media quantity
-Return books / Add new books to system
-Check up coming due dates
-```
+
+- Registering a customer
+- Look up customer info
+- Issue a book to member
+- Search for books/media
+- Check media quantity
+- Return books / Add new books to system
+- Check up coming due dates
+
 
 ## Meta
 ### Contributers
-cartertrafton@gmail.com - [@cartertrafton](https://github.com/cartertrafton/)
+[@cartertrafton](https://github.com/cartertrafton/) - cartertrafton@gmail.com
 
-cotterj@wit.edu - [@juliacotter](https://github.com/juliacotter)
+[@juliacotter](https://github.com/juliacotter) - cotterj@wit.edu
 
 ### Timeline
 - [x] Outline
