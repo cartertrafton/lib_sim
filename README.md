@@ -17,15 +17,22 @@ Digitize the library management system
 ## Installation
 Download the ```src``` file, then using ```g++```, compile ```main.cpp``` and ```functions.cpp``` together and open the ```*.out``` file.
 
+```
+git clone https://github.com/cartertrafton/lib_sim
+cd lib_sim/
+g++ -o lib_sim.out src/main.cpp src/functions.cpp
+./lib_sim.out
+```
+
 ## Features:
   - [x] Registering a member 
   - [x] Look up member info
   - [ ] Add books/media to the library
-  - [ ] Issue a book to member
+  - [x] Issue a book to member
   - [ ] Delete from library	
   - [x] Search for books/media
   - [x] Check book info (quantity, facts, etc)
-  - [ ] Handling book returns
+  - [x] Handling book returns
   - [ ] Check up coming due dates
 
 ## Outline
