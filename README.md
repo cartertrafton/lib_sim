@@ -29,11 +29,11 @@ g++ -o lib_sim.out src/main.cpp src/functions.cpp
   - [x] Look up member info
   - [ ] Add books/media to the library
   - [x] Issue a book to member
-  - [ ] Delete from library	
+  - [x] Delete from library	
   - [x] Search for books/media
   - [x] Check book info (quantity, facts, etc)
   - [x] Handling book returns
-  - [ ] Check up coming due dates
+  - [x] Check up coming due dates
 
 ## Outline
 
@@ -95,7 +95,7 @@ Exit
 - [x] Outline
 - [x] Pseudocode 
 - [x] Objects
-- [ ] Functions
+- [x] Functions
 - [ ] Main program
 - [ ] Report video
 
