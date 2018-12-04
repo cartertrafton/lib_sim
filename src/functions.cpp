@@ -53,7 +53,7 @@ void optionMenu()
  * @param: none.
  * @return: none.
  */
-void registerNewUser(list <user> &Users)
+void registerNewUser(list <user> &UsersList)
 {
 	int uID;
 	string un;
@@ -73,12 +73,12 @@ void registerNewUser(list <user> &Users)
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
-void userSearch(string un, list<user> &Users)
+void userSearch(string inputUserName, list<user> &UsersList)
 {
     int found = 0;
-    list<user>::iterator i = Users.begin();
-    for (i; i != Users.end(); i++){
-        if ((*i).getUserName() == un){
+    list<user>::iterator i = UsersList.begin();
+    for (i; i != UsersList.end(); i++){
+        if ((*i).getUserName() == inputUserName){
             cout << "User ID: " << (*i).getUserID() << endl;
             cout << "Username: " << (*i).getUserName() << endl;
             found = 1;
@@ -97,12 +97,12 @@ void userSearch(string un, list<user> &Users)
  * @param: inputTitle: the title of the media you are searching for
  * @return: none.
  */
-void mediaSearch(string t, list <media> Library)
+void mediaSearch(string inputTitle, list <media> &LibraryList)
 {
 	int found = 0;
-	list<media>::iterator i = Library.begin();
-	for (i; i != Library.end(); i++){
-		if ((*i).getTitle == t){
+	list<media>::iterator i = LibraryList.begin();
+	for (i; i != LibraryList.end(); i++){
+		if ((*i).getTitle() == inputTitle){
 			cout << "Title: " << (*i).getTitle() << endl;
 			cout << "Quantity: " << (*i).getQuantity() << endl;
 			found = 1;
@@ -121,8 +121,20 @@ void mediaSearch(string t, list <media> Library)
  * @param: 
  * @return: none.
  */
-void issueBook()
+void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
 {
+	list<media>::iterator i = LibraryList.begin();
+	list<user>::iterator j = UsersList.begin();
+	for (j; j != UsersList.end(); j++){
+		if ((*j).getUserID() == inputID){
+			for (i; i != LibraryList.end(); i++){
+				if ((*i).getTitle() == inputTitle){
+					(*i).setQuantity((*i).getQuantity()-1);
+					(*j).addToCollection((*i));
+				}
+			}
+		}
+	}
 	return;
 }
 
@@ -133,8 +145,20 @@ void issueBook()
  * @param: inputUserName, inputMedia: the userName of user who borrowed book, and the title of the media borrowed
  * @return: none.
  */
-void returnBook()
+void returnBook(int inputID, string inputTitle, list <media> LibraryList, list <user> UsersList)
 {
+	list<media>::iterator i = LibraryList.begin();
+	list<user>::iterator j = UsersList.begin();
+	for (j; j != UsersList.end(); j++){
+		if ((*j).getUserID() == inputID){
+			for (i; i != LibraryList.end(); i++){
+				if ((*i).getTitle() == inputTitle){
+					(*i).setQuantity((*i).getQuantity()+1);
+					(*j).removeFromCollection((*i));
+				}
+			}
+		}
+	}
 	return;
 }
 
