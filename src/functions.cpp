@@ -73,12 +73,12 @@ void registerNewUser(list <user> &UsersList)
  * @param: inputName: the name of the user you are trying to search.
  * @return: none.
  */
-void userSearch(string un, list<user> &UsersList)
+void userSearch(string inputUserName, list<user> &UsersList)
 {
     int found = 0;
     list<user>::iterator i = UsersList.begin();
     for (i; i != UsersList.end(); i++){
-        if ((*i).getUserName() == un){
+        if ((*i).getUserName() == inputUserName){
             cout << "User ID: " << (*i).getUserID() << endl;
             cout << "Username: " << (*i).getUserName() << endl;
             found = 1;
@@ -97,12 +97,12 @@ void userSearch(string un, list<user> &UsersList)
  * @param: inputTitle: the title of the media you are searching for
  * @return: none.
  */
-void mediaSearch(string t, list <media> LibraryList)
+void mediaSearch(string inputTitle, list <media> &LibraryList)
 {
 	int found = 0;
 	list<media>::iterator i = LibraryList.begin();
 	for (i; i != LibraryList.end(); i++){
-		if ((*i).getTitle() == t){
+		if ((*i).getTitle() == inputTitle){
 			cout << "Title: " << (*i).getTitle() << endl;
 			cout << "Quantity: " << (*i).getQuantity() << endl;
 			found = 1;
@@ -121,7 +121,7 @@ void mediaSearch(string t, list <media> LibraryList)
  * @param: 
  * @return: none.
  */
-void issueBook(int inputID, string inputTitle, list <media> LibraryList, list <user> UsersList)
+void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
 {
 	list<media>::iterator i = LibraryList.begin();
 	list<user>::iterator j = UsersList.begin();
