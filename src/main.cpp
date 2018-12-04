@@ -15,19 +15,16 @@
 
 using namespace std;
 
-list <user> Users;
-list <media> Library;
-
 /*
  * Function prototyping
  */
 void optionMenu();
 void welcomeMenu();
-void registerNewUser(list <user> &Users);
-void userSearch(string un, list<user> &Users);
-void mediaSearch();
-void issueBook();
-void returnBook();
+void registerNewUser(list <user> &UsersList);
+void userSearch(string inputUserName, list<user> &UsersList);
+void mediaSearch(string inputTitle, list <media> &LibraryList);
+void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList);
+void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList);
 void checkDueDates();
 
 
@@ -117,14 +114,14 @@ int main()
 			case 0: break;										// EXIT
 
 			case 1: 											// NEW USER
-				registerNewUser(Users);
+				registerNewUser(UsersList);
 				break;
 
 			case 2: 											// USER SEARCH
 
 				cout << "Enter a user's name to search: ";
 				cin >> searchName;
-				userSearch(searchName, Users);
+				userSearch(searchName, UsersList);
 				break;
 
 			case 3: 											// ISSUE BOOK TO USER
@@ -132,7 +129,7 @@ int main()
 				cin >> inputID;
 				cout << "Enter title of media: ";
 				cin >> inputTitle;
-				//issueBook(inputID, inputTitle);
+				issueBook(inputID, inputTitle, LibraryList, UsersList);
 				break;
 
 			case 4: 											// MEDIA SEARCH
@@ -146,7 +143,7 @@ int main()
 				cin >> inputID;
 				cout << "Enter title of media: ";
 				cin >> inputTitle;
-				//returnBook(inputID, inputTitle);
+				returnBook(inputID, inputTitle, LibraryList, UsersList);
 				break;
 
 			case 6: 											// CHECK DUE DATES
