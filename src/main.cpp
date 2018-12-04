@@ -53,14 +53,14 @@ music *exampleMusic_3 = new music("Midnight Marauders", 3, 	NULL, 	"A Tribe Call
  * Example user creation and person collection population
  */
 user *userExample_0 = new user(1003, "Rachel Green");
-user *userExample_1 = new user(1001, "Chandler Bing");
-user *userExample_2 = new user(1002, "Ross Geller");
-user *userExample_3 = new user(1003, "Monica Geller");
+// user *userExample_1 = new user(1001, "Chandler Bing");
+// user *userExample_2 = new user(1002, "Ross Geller");
+// user *userExample_3 = new user(1003, "Monica Geller");
 
-// userExample_0.addToCollection(exampleBook_0);
-// userExample_1.addToCollection(exampleBook_1);
-// userExample_2.addToCollection(exampleMovie_0);
-// userExample_3.addToCollection(exampleMusic_0);
+userExample_0->addToCollection(exampleBook_0.getTitle());
+// userExample_1.addToCollection(exampleBook_1.getTitle());
+// userExample_2.addToCollection(exampleMovie_0.getTitle());
+// userExample_3.addToCollection(exampleMusic_0.getTitle());
 
 
 
@@ -72,25 +72,25 @@ user *userExample_3 = new user(1003, "Monica Geller");
 list<user> UsersList;
 list<media> LibraryList;
 
-/*
+
 LibraryList.push_back(exampleBook_0);
-LibraryList.push_back(exampleBook_1);
-LibraryList.push_back(exampleBook_2);
-LibraryList.push_back(exampleBook_3);
-LibraryList.push_back(exampleMovie_0);
-LibraryList.push_back(exampleMovie_1);
-LibraryList.push_back(exampleMovie_2);
-LibraryList.push_back(exampleMovie_3);
-LibraryList.push_back(exampleMusic_0);
-LibraryList.push_back(exampleMusic_1);
-LibraryList.push_back(exampleMusic_2);
-LibraryList.push_back(exampleMusic_3);
+// LibraryList.push_back(exampleBook_1);
+// LibraryList.push_back(exampleBook_2);
+// LibraryList.push_back(exampleBook_3);
+// LibraryList.push_back(exampleMovie_0);
+// LibraryList.push_back(exampleMovie_1);
+// LibraryList.push_back(exampleMovie_2);
+// LibraryList.push_back(exampleMovie_3);
+// LibraryList.push_back(exampleMusic_0);
+// LibraryList.push_back(exampleMusic_1);
+// LibraryList.push_back(exampleMusic_2);
+// LibraryList.push_back(exampleMusic_3);
 
 UsersList.push_back(userExample_0);
-UsersList.push_back(userExample_1);
-UsersList.push_back(userExample_2);
-UsersList.push_back(userExample_3);
-*/
+// UsersList.push_back(userExample_1);
+// UsersList.push_back(userExample_2);
+// UsersList.push_back(userExample_3);
+
 
 
 /*

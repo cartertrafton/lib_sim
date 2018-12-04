@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -23,7 +24,7 @@ class user
 	private:
 		int userID;
 		string userName;
-		// TODO: media* collection[]			// Users current collection of books.
+		vector<string> collection;		// Users current collection of books.
 	public:
 		
 		user(){}				// Constructor
@@ -45,8 +46,31 @@ class user
 			cout << "\tName: " << this->userName << endl;
 		}			
 			
-		// TODO: void addToCollection(media inMedia){}
-		// TODO : void removeFromCollection(media inMedia){}
+		/*
+		 * addToCollection: adds the title of a piece object to the collection vector.
+		 * @param: inMedia: title of media to add to colletion.
+		 * @return: none.
+		 */
+		void addToCollection(string inMedia)
+		{ 
+			collection.push_back(inMedia);
+		}
+
+		/*
+		 * removeFromCollection: Loops through collection vector and erases if title matches.
+		 * @param: inMedia: title of media to remove from collection.
+		 * @return: none.
+		 */
+		void removeFromCollection(string inMedia)
+		{
+			    for (int i = 0; i < collection.size(); i++) 
+			    {
+					if ( inMedia == collection.at(i))
+					{
+						collection.erase(collection.begin()+i);
+					}
+			    }
+		}
 
 
 		

@@ -128,8 +128,8 @@ void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <
 			for (i; i != LibraryList.end(); i++){
 				if ((*i).getTitle() == inputTitle){
 					(*i).setQuantity((*i).getQuantity()-1);
-					(*j).addToCollection((*i));
-					(*i).setDueDate();
+					(*j).addToCollection((*i).getTitle());
+					//(*i).setDueDate();			
 				}
 			}
 		}
@@ -153,7 +153,7 @@ void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list 
 			for (i; i != LibraryList.end(); i++){
 				if ((*i).getTitle() == inputTitle){
 					(*i).setQuantity((*i).getQuantity()+1);
-					(*j).removeFromCollection((*i));
+					(*j).removeFromCollection((*i).getTitle());
 				
 					(*i).setDueDate(NULL);
 				}
