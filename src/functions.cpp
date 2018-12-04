@@ -50,7 +50,7 @@ void optionMenu()
 
 /* 
  * registerNewUser: creates a new user prompts for input of data , then and adds them to the user list
- * @param: none.
+ * @param: &UsersList: pass by reference of the UsersList
  * @return: none.
  */
 void registerNewUser(list <user> &UsersList)
@@ -70,7 +70,7 @@ void registerNewUser(list <user> &UsersList)
 
 /* 
  * userSearch: searches through the user list and prints user info if inputName matches userName
- * @param: inputName: the name of the user you are trying to search.
+ * @param: inputName, &UsersList: the name of the user you are trying to search and the memory of UsersList.
  * @return: none.
  */
 void userSearch(string inputUserName, list<user> &UsersList)
@@ -94,7 +94,7 @@ void userSearch(string inputUserName, list<user> &UsersList)
 
 /* 
  * mediaSearch: searches through media list and prints quantity and info if inputTitle matches media title
- * @param: inputTitle: the title of the media you are searching for
+ * @param: inputTitle, &LibraryList: the title of the media you are searching for and memory location of LibraryList
  * @return: none.
  */
 void mediaSearch(string inputTitle, list <media> &LibraryList)
@@ -118,7 +118,7 @@ void mediaSearch(string inputTitle, list <media> &LibraryList)
 
 /* 
  * issueBook: adds a specific media object to a user's collection and adjusts quantity of media in library.
- * @param: 
+ * @param: inputID, inputTitle, &LibraryList, &UsersList: the ID of the user, media title, and locations of memory for the two lists
  * @return: none.
  */
 void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
@@ -142,10 +142,10 @@ void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <
 
 /* 
  * returnBook: removes a book from a users collection and adjusts quantity in media list
- * @param: inputUserName, inputMedia: the userName of user who borrowed book, and the title of the media borrowed
+ * @param: inputID, inputTitle, &LibraryList, &UsersList: the ID of the user, media title, and locations of memory for the two lists
  * @return: none.
  */
-void returnBook(int inputID, string inputTitle, list <media> LibraryList, list <user> UsersList)
+void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
 {
 	list<media>::iterator i = LibraryList.begin();
 	list<user>::iterator j = UsersList.begin();
@@ -166,7 +166,7 @@ void returnBook(int inputID, string inputTitle, list <media> LibraryList, list <
 
 /* 
  * checkDueDates: loops through media list and looks for match of due date to input due date
- * @param: inputDate
+ * @param: 
  * @return: none.
  */
 void checkDueDates()

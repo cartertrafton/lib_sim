@@ -73,23 +73,23 @@ list<user> UsersList;
 list<media> LibraryList;
 
 /*
-Library.push_back(exampleBook_0);
-Library.push_back(exampleBook_1);
-Library.push_back(exampleBook_2);
-Library.push_back(exampleBook_3);
-Library.push_back(exampleMovie_0);
-Library.push_back(exampleMovie_1);
-Library.push_back(exampleMovie_2);
-Library.push_back(exampleMovie_3);
-Library.push_back(exampleMusic_0);
-Library.push_back(exampleMusic_1);
-Library.push_back(exampleMusic_2);
-Library.push_back(exampleMusic_3);
+LibraryList.push_back(exampleBook_0);
+LibraryList.push_back(exampleBook_1);
+LibraryList.push_back(exampleBook_2);
+LibraryList.push_back(exampleBook_3);
+LibraryList.push_back(exampleMovie_0);
+LibraryList.push_back(exampleMovie_1);
+LibraryList.push_back(exampleMovie_2);
+LibraryList.push_back(exampleMovie_3);
+LibraryList.push_back(exampleMusic_0);
+LibraryList.push_back(exampleMusic_1);
+LibraryList.push_back(exampleMusic_2);
+LibraryList.push_back(exampleMusic_3);
 
-Users.push_back(userExample_0);
-Users.push_back(userExample_1);
-Users.push_back(userExample_2);
-Users.push_back(userExample_3);
+UsersList.push_back(userExample_0);
+UsersList.push_back(userExample_1);
+UsersList.push_back(userExample_2);
+UsersList.push_back(userExample_3);
 */
 
 
