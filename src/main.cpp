@@ -95,7 +95,7 @@ int main()
 	{
 		optionMenu();
 		cin >> choice;
-		switch(choice)		// TODO: Add choices -> functions
+		switch(choice)		
 		{
 			case 0: break;										// EXIT
 
@@ -145,9 +145,7 @@ int main()
 		{
 			cout << "Exiting...\n";
 			exit(0);
-		
 		}
-
 	}
 
 	return 0;
