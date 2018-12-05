@@ -47,7 +47,6 @@ void optionMenu()
 }
 
 
-
 /* 
  * registerNewUser: creates a new user prompts for input of data , then and adds them to the user list
  * @param: inName, inID, &UsersList: input name, input ID, and pass by reference of the UsersList
@@ -93,13 +92,13 @@ void userSearch(string inputUserName, list<user> &UsersList)
  * @param: inputTitle, &LibraryList: the title of the media you are searching for and memory location of LibraryList
  * @return: none.
  */
-void mediaSearch(string inputTitle, list <media> &LibraryList)
+void mediaSearch(string inputTitle, list <media *> &LibraryList)
 {
 	int found = 0;
-	list<media>::iterator i = LibraryList.begin();
+	list<media *>::iterator i = LibraryList.begin();
 	for (i; i != LibraryList.end(); i++){
-		if ((*i).getTitle() == inputTitle){
-			(*i).print();
+		if ((*i)->getTitle() == inputTitle){
+			(*i)->print();
 			found = 1;
 		}
 	}
@@ -116,17 +115,17 @@ void mediaSearch(string inputTitle, list <media> &LibraryList)
  * @param: inputID, inputTitle, &LibraryList, &UsersList: the ID of the user, media title, and locations of memory for the two lists
  * @return: none.
  */
-void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
+void issueBook(int inputID, string inputTitle, list <media *> &LibraryList, list <user> &UsersList)
 {
-	list<media>::iterator i = LibraryList.begin();
+	list<media *>::iterator i = LibraryList.begin();
 	list<user>::iterator j = UsersList.begin();
 	for (j; j != UsersList.end(); j++){
 		if ((*j).getUserID() == inputID){
 			for (i; i != LibraryList.end(); i++){
-				if ((*i).getTitle() == inputTitle){
-					(*i).setQuantity((*i).getQuantity()-1);
-					(*j).addToCollection((*i).getTitle());
-					//(*i).setDueDate();			
+				if ((*i)->getTitle() == inputTitle){
+					(*i)->setQuantity((*i)->getQuantity()-1);
+					(*j).addToCollection((*i)->getTitle());
+					//(*i)->setDueDate();			
 				}
 			}
 		}
@@ -141,18 +140,18 @@ void issueBook(int inputID, string inputTitle, list <media> &LibraryList, list <
  * @param: inputID, inputTitle, &LibraryList, &UsersList: the ID of the user, media title, and locations of memory for the two lists
  * @return: none.
  */
-void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list <user> &UsersList)
+void returnBook(int inputID, string inputTitle, list <media *> &LibraryList, list <user> &UsersList)
 {
-	list<media>::iterator i = LibraryList.begin();
+	list<media *>::iterator i = LibraryList.begin();
 	list<user>::iterator j = UsersList.begin();
 	for (j; j != UsersList.end(); j++){
 		if ((*j).getUserID() == inputID){
 			for (i; i != LibraryList.end(); i++){
-				if ((*i).getTitle() == inputTitle){
-					(*i).setQuantity((*i).getQuantity()+1);
-					(*j).removeFromCollection((*i).getTitle());
+				if ((*i)->getTitle() == inputTitle){
+					(*i)->setQuantity((*i)->getQuantity()+1);
+					(*j).removeFromCollection((*i)->getTitle());
 				
-					(*i).setDueDate(NULL);
+					(*i)->setDueDate(NULL);
 				}
 			}
 		}
@@ -167,13 +166,13 @@ void returnBook(int inputID, string inputTitle, list <media> &LibraryList, list 
  * @param: inputDate, &LibraryList: the due date you are searching for and the location of memory of LibraryList
  * @return: none.
  */
-void checkDueDates(string inputDate, list <media> &LibraryList)
+void checkDueDates(string inputDate, list <media *> &LibraryList)
 {
 	int found = 0;
-	list<media>::iterator i = LibraryList.begin();
+	list<media *>::iterator i = LibraryList.begin();
 	for (i; i != LibraryList.end(); i++){
-		if ((*i).getDueDate() == inputDate){
-			(*i).print();
+		if ((*i)->getDueDate() == inputDate){
+			(*i)->print();
 			found = 1;
 		}
 	}

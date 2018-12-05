@@ -28,6 +28,10 @@ class media 						// Base class of all media
 	public:
 		
 		media(){}					// Constructor
+		media(string inTitle, int inQuantity, string inDueDate)
+		{
+			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
+		}
 		~media(){}					// Deconstructor
 
 		virtual void setTitle(string inTitle){ title = inTitle; }		// Set functions

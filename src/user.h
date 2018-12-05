@@ -44,6 +44,11 @@ class user
 		{
 			cout << "\tUserID: " << this->userID << endl;
 			cout << "\tName: " << this->userName << endl;
+			cout << "\tCollection: \n";
+            for (int i; i < collection.size(); i++)
+            {
+            	cout << "\t\t" << collection[i];
+            }
 		}			
 			
 		/*

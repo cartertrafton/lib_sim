@@ -27,7 +27,7 @@ g++ -o lib_sim.out src/main.cpp src/functions.cpp
 ## Features:
   - [x] Registering a member 
   - [x] Look up member info
-  - [ ] Add books/media to the library
+  - [x] Add books/media to the library
   - [x] Issue a book to member
   - [x] Delete from library	
   - [x] Search for books/media
@@ -96,7 +96,7 @@ Exit
 - [x] Pseudocode 
 - [x] Objects
 - [x] Functions
-- [ ] Main program
+- [x] Main program
 - [ ] Report video
 
 ### Resources
