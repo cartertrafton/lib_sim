@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <ctime>
 #include "library.h"
 #include "user.h"
 
@@ -115,7 +116,7 @@ void mediaSearch(string inputTitle, list <media *> &LibraryList)
  * @param: inputID, inputTitle, &LibraryList, &UsersList: the ID of the user, media title, and locations of memory for the two lists
  * @return: none.
  */
-void issueBook(int inputID, string inputTitle, list <media *> &LibraryList, list <user> &UsersList)
+void issueBook(int inputID, string inputTitle, tm inputDate, list <media *> &LibraryList, list <user> &UsersList)
 {
 	list<media *>::iterator i = LibraryList.begin();
 	list<user>::iterator j = UsersList.begin();
@@ -125,7 +126,11 @@ void issueBook(int inputID, string inputTitle, list <media *> &LibraryList, list
 				if ((*i)->getTitle() == inputTitle){
 					(*i)->setQuantity((*i)->getQuantity()-1);
 					(*j).addToCollection((*i)->getTitle());
-					//(*i)->setDueDate();			
+					inputDate.tm_mon -=1;				//tm_mon: months 0-11
+					inputDate.tm_year -=1900;			//tm_year: years since 1900
+					inputDate.tm_mday += 14;
+					(*i)->setDueDate(inputDate);
+					cout << "The due date is " << inputDate.tm_mon+1 << " " << inputDate.tm_mday << " " << inputDate.tm_year+1900 << endl;		
 				}
 			}
 		}
@@ -150,8 +155,8 @@ void returnBook(int inputID, string inputTitle, list <media *> &LibraryList, lis
 				if ((*i)->getTitle() == inputTitle){
 					(*i)->setQuantity((*i)->getQuantity()+1);
 					(*j).removeFromCollection((*i)->getTitle());
-				
-					(*i)->setDueDate(NULL);
+					tm noDate = {};
+					(*i)->setDueDate(noDate);
 				}
 			}
 		}
@@ -166,12 +171,14 @@ void returnBook(int inputID, string inputTitle, list <media *> &LibraryList, lis
  * @param: inputDate, &LibraryList: the due date you are searching for and the location of memory of LibraryList
  * @return: none.
  */
-void checkDueDates(string inputDate, list <media *> &LibraryList)
+void checkDueDates(tm inputDate, list <media *> &LibraryList)
 {
 	int found = 0;
 	list<media *>::iterator i = LibraryList.begin();
+	inputDate.tm_mon -=1;
+	inputDate.tm_year -=1900;
 	for (i; i != LibraryList.end(); i++){
-		if ((*i)->getDueDate() == inputDate){
+		if ((*i)->getDueDate().tm_mon == inputDate.tm_mon && (*i)->getDueDate().tm_mday == inputDate.tm_mday){
 			(*i)->print();
 			found = 1;
 		}

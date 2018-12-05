@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 
 using namespace std;
 
@@ -23,24 +24,24 @@ class media 						// Base class of all media
 		
 		string title;				// Title of media (Book, movie, or album)
 		int quantity;				// Current quantity in Library
-		string dueDate;				// The due date of book (or NULL)
+		tm dueDate;				// The due date of book (or NULL)
 		
 	public:
 		
 		media(){}					// Constructor
-		media(string inTitle, int inQuantity, string inDueDate)
+		media(string inTitle, int inQuantity, tm inDueDate)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity);
 		}
 		~media(){}					// Deconstructor
 
 		virtual void setTitle(string inTitle){ title = inTitle; }		// Set functions
 		virtual void setQuantity(int inQuantity){ quantity = inQuantity; }
-		virtual void setDueDate(string inDueDate){ dueDate = inDueDate; }
+		virtual void setDueDate(tm inDueDate){ dueDate = inDueDate; }
 
 		virtual string getTitle(){ return title; }						// Get functions
 		virtual int getQuantity(){ return quantity; }
-		virtual string getDueDate(){ return dueDate; }	
+		virtual tm getDueDate(){ return dueDate; }	
 
 		virtual void print()
 		{
@@ -60,9 +61,9 @@ class book : public media
 		string author;				// Author's name
 	public:
 		book(){}					// Constructor
-		book(string inTitle, int inQuantity, string inDueDate, long inISBN, string inAuthor)
+		book(string inTitle, int inQuantity, long inISBN, string inAuthor)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity);
 			setISBN(inISBN); setAuthor(inAuthor);
 		}
 		~book(){}					// Deconstructor
@@ -93,9 +94,9 @@ class movie : public media			// Derived movie from media as sub-class
 		int releaseYear;			// Year of release
 	public:
 		movie(){}					// Constructor
-		movie(string inTitle, int inQuantity, string inDueDate, string inDirector, int inReleaseYear)
+		movie(string inTitle, int inQuantity, string inDirector, int inReleaseYear)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity);
 			setDirector(inDirector); setReleaseYear(inReleaseYear);
 		}
 		~movie(){}					// Deconstructor
@@ -126,9 +127,9 @@ class music : public media			// Derived music from media as sub-class
 		string genre;				// Name of genre
 	public:
 		music(){}					// Constructor
-		music(string inTitle, int inQuantity, string inDueDate, string inArtist, string inGenre)
+		music(string inTitle, int inQuantity, string inArtist, string inGenre)
 		{
-			setTitle(inTitle); setQuantity(inQuantity); setDueDate(inDueDate);
+			setTitle(inTitle); setQuantity(inQuantity);
 			setArtist(inArtist); setGenre(inGenre);
 		}
 		~music(){}					// Deconstructor
