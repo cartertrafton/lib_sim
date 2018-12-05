@@ -36,11 +36,11 @@ void welcomeMenu()
 // optionMenu: for printing the options menu, called after every command completes
 void optionMenu()
 {
-	cout << " PRESS: \n";
+	cout << "\n PRESS: \n";
 	cout << "\t[ 1 ] to Registering a new user\n";
 	cout << "\t[ 2 ] to Look up user information\n";
-	cout << "\t[ 3 ] to Search for media / check quantity\n";
-	cout << "\t[ 4 ] to Issue a book to a user\n";
+	cout << "\t[ 3 ] to Issue a book to a user\n";
+	cout << "\t[ 4 ] to Search for media / check quantity\n";
 	cout << "\t[ 5 ] to Return a book to the library\n";
 	cout << "\t[ 6 ] to Check for up-coming due-dates\n";
 	cout << "\t[ 0 ] to EXIT\n";
@@ -50,19 +50,16 @@ void optionMenu()
 
 /* 
  * registerNewUser: creates a new user prompts for input of data , then and adds them to the user list
- * @param: &UsersList: pass by reference of the UsersList
+ * @param: inName, inID, &UsersList: input name, input ID, and pass by reference of the UsersList
  * @return: none.
  */
-void registerNewUser(list <user> &UsersList)
+void registerNewUser(string inName, int inID, list <user> &UsersList)
 {
-	int uID;
-	string un;
-	cout << "Enter the new userID and username: ";
-	cin >> uID >> un;
 	user newUser;
-	newUser.setUserID(uID);
-	newUser.setUserName(un);
+	newUser.setUserID(inID);
+	newUser.setUserName(inName);
 	UsersList.push_back(newUser);
+	
 	return;
 }
 
