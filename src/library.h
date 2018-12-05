@@ -57,26 +57,26 @@ class media 						// Base class of all media
 class book : public media			
 {
 	private:
-		long ISBN;					// ISBN of book
+		string ISBN;					// ISBN of book
 		string author;				// Author's name
 	public:
 		book(){}					// Constructor
-		book(string inTitle, int inQuantity, long inISBN, string inAuthor)
+		book(string inTitle, int inQuantity, string inISBN, string inAuthor)
 		{
 			setTitle(inTitle); setQuantity(inQuantity);
 			setISBN(inISBN); setAuthor(inAuthor);
 		}
 		~book(){}					// Deconstructor
 
-		void setISBN(int inISBN){ ISBN = inISBN; }			// Set functions 
+		void setISBN(string inISBN){ ISBN = inISBN; }			// Set functions 
 		void setAuthor(string inAuthor){ author = inAuthor; }
 
-		long getISBN(){ return ISBN; }						// Get functions
+		string getISBN(){ return ISBN; }						// Get functions
 		string getAuthor(){ return author; }
 
 		void print()										// Print data
 		{
-			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\n\tTitle: " << this->getTitle() << endl;
 			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tAuthor: " << this->author << endl;
 			cout << "\tISBN: " << this->ISBN << endl;
@@ -108,7 +108,7 @@ class movie : public media			// Derived movie from media as sub-class
 		
 		void print()			// Print data
 		{
-			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\n\tTitle: " << this->getTitle() << endl;
 			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tDirector: " << this->director << endl;
 			cout << "\tRelease Year: " << this->releaseYear << endl;
@@ -142,7 +142,7 @@ class music : public media			// Derived music from media as sub-class
 		
 		void print()	// Print data
 		{
-			cout << "\tTitle: " << this->getTitle() << endl;
+			cout << "\n\tTitle: " << this->getTitle() << endl;
 			cout << "\tQuantity: " << this->getQuantity() << endl;
 			cout << "\tArtist: " << this->artist << endl;
 			cout << "\tGenre: " << this->genre << endl;

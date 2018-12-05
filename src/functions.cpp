@@ -59,7 +59,6 @@ void registerNewUser(string inName, int inID, list <user> &UsersList)
 	newUser.setUserID(inID);
 	newUser.setUserName(inName);
 	UsersList.push_back(newUser);
-	
 	return;
 }
 

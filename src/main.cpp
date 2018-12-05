@@ -51,10 +51,10 @@ int main()
 	/*
 	 * Example media instantiation for testing
 	 */
-	book *exampleBook_0 = new book("Annihilation", 			2,  	9780374104092, "Jeff VanderMeer");
-	book *exampleBook_1 = new book("DUNE", 					3,  	9783641173081, 		"Frank Herbert");
-	book *exampleBook_2 = new book("The Hobbit", 			1,  	9789402306538, 		"J.R.R. Tolkien");
-	book *exampleBook_3 = new book("A Clash of Kings", 		2,  	9780553579901, 		"George R.R. Martin");
+	book *exampleBook_0 = new book("Annihilation", 			2,  	"9780374104092", 		"Jeff VanderMeer");
+	book *exampleBook_1 = new book("DUNE", 					3,  	"9783641173081", 		"Frank Herbert");
+	book *exampleBook_2 = new book("The Hobbit", 			1,  	"9789402306538", 		"J.R.R. Tolkien");
+	book *exampleBook_3 = new book("A Clash of Kings", 		2,  	"9780553579901", 		"George R.R. Martin");
 
 	movie *exampleMovie_0 = new movie("The Departed", 		3, 	 	"Martin Scorsese",	2006);
 	movie *exampleMovie_1 = new movie("First Man", 			1, 	 	"Damien Chazelle",	2018);
@@ -62,9 +62,9 @@ int main()
 	movie *exampleMovie_3 = new movie("Get Out", 			2, 	 	"Jordan Peele",		2017);
 
 	music *exampleMusic_0 = new music("Led Zeppelin IV", 	2, 	 	"Led Zeppelin",				"Rock");
-	music *exampleMusic_1 = new music("Pet Sounds", 		2, 	 	"Beach Boys", 			"Pop");
+	music *exampleMusic_1 = new music("Pet Sounds", 		2, 	 	"Beach Boys", 				"Pop");
 	music *exampleMusic_2 = new music("Electric Ladyland", 	1, 	 	"Jimi Hendrix",				"Rock");
-	music *exampleMusic_3 = new music("Midnight Marauders", 3, 	 	"A Tribe Called QUest",	"Hip-hop");
+	music *exampleMusic_3 = new music("Midnight Marauders", 3, 	 	"A Tribe Called QUest",		"Hip-hop");
 
 
 
@@ -80,13 +80,16 @@ int main()
 	/*
 	 * Library list population 
 	 */
+	LibraryList.push_back(exampleBook_0);
 	LibraryList.push_back(exampleBook_1);
 	LibraryList.push_back(exampleBook_2);
 	LibraryList.push_back(exampleBook_3);
+
 	LibraryList.push_back(exampleMovie_0);
 	LibraryList.push_back(exampleMovie_1);
 	LibraryList.push_back(exampleMovie_2);
 	LibraryList.push_back(exampleMovie_3);
+
 	LibraryList.push_back(exampleMusic_0);
 	LibraryList.push_back(exampleMusic_1);
 	LibraryList.push_back(exampleMusic_2);
@@ -125,8 +128,9 @@ int main()
 				break;
 
 			case 4: 											// MEDIA SEARCH
+				cin.ignore();
 				cout << "Enter a Title to search: ";
-				cin >> inputTitle;
+				getline(cin, inputTitle);		
 				mediaSearch(inputTitle, LibraryList);
 				break;
 

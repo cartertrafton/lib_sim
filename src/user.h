@@ -42,7 +42,7 @@ class user
 
 		void print() 	// Print data
 		{
-			cout << "\tUserID: " << this->userID << endl;
+			cout << "\n\tUserID: " << this->userID << endl;
 			cout << "\tName: " << this->userName << endl;
 			cout << "\tCollection: \n";
             for (int i; i < collection.size(); i++)
