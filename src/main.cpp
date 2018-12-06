@@ -111,7 +111,6 @@ int main()
 				break;
 
 			case 2: 											// USER SEARCH
-
 				cout << "Enter a user's name to search: ";
 				cin >> searchName;
 				userSearch(searchName, UsersList);
@@ -120,8 +119,9 @@ int main()
 			case 3: 											// ISSUE BOOK TO USER
 				cout << "Enter user ID: ";
 				cin >> inputID;
+				cin.ignore();
 				cout << "Enter title of media: ";
-				cin >> inputTitle;
+				getline(cin, inputTitle);		
 				cout << "Enter today's date (mm dd yyyy): ";
 				cin >> inputDate.tm_mon >> inputDate.tm_mday >> inputDate.tm_year;
 				issueBook(inputID, inputTitle, inputDate, LibraryList, UsersList);
@@ -137,7 +137,9 @@ int main()
 			case 5: 											// RETURN BOOK
 				cout << "Enter user ID: ";
 				cin >> inputID;
+				cin.ignore();
 				cout << "Enter title of media: ";
+				getline(cin, inputTitle);		
 				cin >> inputTitle;
 				returnBook(inputID, inputTitle, LibraryList, UsersList);
 				break;
@@ -151,6 +153,7 @@ int main()
 			default:
 				if (choice != 0)
 					cout << "Invalid input." << endl;
+
 		}
 
 	} while(choice !=0);

@@ -1,4 +1,4 @@
-# lib_sim (WIP)
+# lib_sim
 ## Library Simulation Software - OOP Final
 ----------------------------------------------------------------------------
 	  _ _ _         _           
@@ -97,7 +97,7 @@ Exit
 - [x] Objects
 - [x] Functions
 - [x] Main program
-- [ ] Report video
+- [x] Report video
 
 ### Resources
 - Profesor Carpenters's lectures
